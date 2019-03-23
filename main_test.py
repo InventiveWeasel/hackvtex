@@ -16,3 +16,4 @@ print("From server:\n"+ desc)
 #get from wav from server
 sp = Speaker()
 sp.getAudioFile(desc, 'product_description')
+sp.playDescription('product_description.wav')

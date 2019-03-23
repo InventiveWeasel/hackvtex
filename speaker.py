@@ -1,4 +1,5 @@
 from watson_developer_cloud import TextToSpeechV1
+from playsound import playsound
 
 class Speaker:
     def __init__(self):
@@ -15,3 +16,6 @@ class Speaker:
                     'audio/wav',
                     'pt-BR_IsabelaVoice'
                 ).get_result().content)
+
+    def playDescription(self, filename):
+        playsound(filename+".wav")
