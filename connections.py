@@ -7,6 +7,7 @@ class ConnectionManager:
     def getDescription(self,descID):
         PARAMS = {'codigo':descID}
         r = requests.get(url=self.serverURL, params=PARAMS)
+        print(r.content)
         desc = r.content.decode("utf-8")
         #remove breakline
         auxBR = desc.find("<")

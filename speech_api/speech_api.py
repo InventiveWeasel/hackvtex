@@ -8,7 +8,7 @@ text_to_speech = TextToSpeechV1(
 with open('hello_world.wav', 'wb') as audio_file:
     audio_file.write(
         text_to_speech.synthesize(
-            'Hello world',
+            'Olá mundo',
             'audio/wav',
-            'en-US_AllisonVoice'
+            'pt-BR_IsabelaVoice'
         ).get_result().content)
